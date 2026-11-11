@@ -1,0 +1,10 @@
+
+version: 2
+
+sources:
+  - name: market_data
+    database: awsdatacatalog
+    schema: market_analytics
+    tables:
+      - name: market_data_processed
+

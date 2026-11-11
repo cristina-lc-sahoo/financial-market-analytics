@@ -1,0 +1,24 @@
+
+version: 2
+
+models:
+  - name: stock_daily_summary
+    description: Daily stock performance metrics by ticker.
+
+    columns:
+      - name: ticker
+        tests:
+          - not_null
+
+      - name: trade_date
+        tests:
+          - not_null
+
+      - name: record_count
+        tests:
+          - not_null
+
+      - name: average_close
+        tests:
+          - not_null
+

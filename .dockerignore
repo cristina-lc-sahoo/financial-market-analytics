@@ -1,0 +1,15 @@
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.env
+.env.*
+config/.env
+target/
+dbt/target/
+dbt/logs/
+.DS_Store
+data/

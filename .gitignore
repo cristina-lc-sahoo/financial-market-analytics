@@ -1,0 +1,23 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+
+# Virtual environments
+.venv-*/
+venv/
+
+# Environment variables and secrets
+.env.*
+config/.env
+
+# Python cache
+*.pyo
+
+# dbt generated files
+dbt/target/
+dbt/logs/
+
+# macOS
+.DS_Store
+data/

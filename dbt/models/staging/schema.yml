@@ -1,0 +1,20 @@
+
+version: 2
+
+models:
+  - name: stg_stock_prices
+    description: Cleaned and standardized stock market prices.
+
+    columns:
+      - name: ticker
+        tests:
+          - not_null
+
+      - name: trade_date
+        tests:
+          - not_null
+
+      - name: close_price
+        tests:
+          - not_null
+
