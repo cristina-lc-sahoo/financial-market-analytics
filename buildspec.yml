@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 789942391442.dkr.ecr.us-east-2.amazonaws.com
+
+  build:
+    commands:
+      - echo Building Docker image...
+      - docker build -t financial-market-analytics .
+      - docker tag financial-market-analytics:latest 789942391442.dkr.ecr.us-east-2.amazonaws.com/financial-market-analytics:latest
+
+  post_build:
+    commands:
+      - echo Pushing Docker image to ECR...
+      - docker push 789942391442.dkr.ecr.us-east-2.amazonaws.com/financial-market-analytics:latest
+      - echo Build completed successfully.
